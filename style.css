@@ -1,0 +1,165 @@
+body {
+    background-color:aliceblue;
+  }
+  
+  /* Style du conteneur */
+  .container0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    padding-top: 270px;
+   
+  }
+   
+  .container1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-bottom:auto; /* Ajout de marge inférieure */
+    
+  }
+  
+  /* Style du formulaire */
+  form {
+    width: 400px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  h2{
+    
+    justify-content: center;
+    color: rgba(46, 46, 221, 0.827);
+    font-size: 2.2em;
+    font-weight: 800;
+  
+    margin-left: 50px;
+  }
+  
+  
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  /* Style des modules enregistrés */
+  .module-container {
+   width: 21.25em;
+   box-shadow: 0 5px 25px rgba(1 1 1/15%);
+   border-radius: 10px;
+   padding: 25px;
+   margin-top:150px;
+   min-height: 14em;
+   
+   overflow: hidden;
+   border-radius: 10px; 
+   transition:0.7s ease;
+  }
+ .module-container:hover{
+    transform: scale(1.1);
+    
+ }
+  .module-container.dysfonctionnement {
+    background-color: #FF5151;
+  }
+  
+  .module-container.module-fonctionnel {
+    background-color: #86FF7A;
+  }
+  .chart-canvas {
+    position: relative;
+    z-index: 0;
+  }
+  
+  .chart-canvas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+/* Styles pour le menu de notification */
+.notification-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.notification-list {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  min-width: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ajouter une ombre légère */
+}
+
+.notification-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+/* Style pour le texte du badge lorsque le nombre est grand */
+.notification-badge.big {
+  font-size: 12px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+}
